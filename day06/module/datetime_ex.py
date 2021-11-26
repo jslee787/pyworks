@@ -2,6 +2,8 @@
 import datetime
 
 print(datetime.datetime.today())    #날짜 시간
+print(datetime.datetime.now())
+
 print(datetime.date.today())        #날짜
 #print(datetime.time)
 

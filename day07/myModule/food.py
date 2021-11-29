@@ -6,3 +6,6 @@ def cook():
 
 def eat():
     print("먹다")
+
+def sleep():
+    print("잔다")

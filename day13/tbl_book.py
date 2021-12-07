@@ -26,7 +26,7 @@ def insert_book():
     cur = conn.cursor()
     #sql = "INSERT INTO book (title, publisher, page) VALUES ('웹 표준의 정석', '고경희', 600)"
     sql = "INSERT INTO book (title, publisher, page) VALUES (?, ?, ?)"
-    cur.execute(sql, ('점프 투 파이썬', '박응용', 300))
+    cur.execute(sql, ('웹 표준의 정석', '고경희', 600))
     conn.commit()
     conn.close()
 
@@ -61,15 +61,15 @@ def update_book():
 def delete_book():
     conn = getconn()
     cur = conn.cursor()
-    sql = "DELETE FROM book WHERE book_no = ?"
-    cur.execute(sql, (1, ))
+    sql = "DELETE FROM book"
+    cur.execute(sql)
     conn.commit()
     conn.close()
 
 if __name__ == "__main__":
     #create_table()
 
-    #insert_book()
+    insert_book()
     #delete_book()
     #update_book()
 
